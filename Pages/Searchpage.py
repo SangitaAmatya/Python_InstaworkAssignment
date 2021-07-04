@@ -4,7 +4,7 @@ class SearchPage ():
         super ().__init__ (driver)
 
     def open (self, url):
-        self.driver.get (url)
+     self.driver.get (url)
 
     def setLeavingFrom (self, LeavingFrom):
         self.type (" LeavingFrom_classname", LeavingFrom)

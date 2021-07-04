@@ -1,13 +1,13 @@
 Feature: Visit the Orbitz side Logo
 
-  Scenario Outline: Vallidating Orbitze the site
-    Given  Select the Flights
-    When   Click the roundTrip
-    Then   Enter the Leaving fron <LeavingFrom> and going to<Going to> select d<Departing> and <Returing>
-    And    Click the Search Button
-    And    Select the Nonstop Flight
-    And    Select Most expensive Flight from the list and click
+Feature: FlightFeature
 
-      | LeavingFrom | Going to | Departing | Returing |
-    Examples:
-      | Sanfranscico | NewYork | july/15/2021 | july/25/2021 |
+  Scenario: Search Flight between cities
+    Given I navigate to the Home page
+    And I click on Flight page
+    And I enter the  Leaving from  And going to
+      | Leavig_from   | Going_to |
+      | San Francisco | New York |
+    And I Enter Departing and Returndate
+    And I click the search button
+    Then I should see the search resultsls
